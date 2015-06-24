@@ -1,0 +1,32 @@
+{
+  "search": {
+    "params": ["search"],
+    "qs": {
+      "action": "opensearch"
+    }
+  },
+  "query": {
+    "params": [],
+    "qs": {
+      "action": "query"
+    }
+  },
+  "langlinks": {
+    "params": ["pageids"],
+    "qs": {
+      "action": "query",
+      "prop": "langlinks",
+      "lllimit": "max",
+      "redirects": true
+    }
+  },
+  "redirects": {
+    "params": ["pageids"],
+    "qs": {
+      "action": "query",
+      "prop": "redirects",
+      "rdlimit": "max",
+      "redirects": false
+    }
+  }
+}

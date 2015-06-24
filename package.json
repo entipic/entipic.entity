@@ -1,0 +1,31 @@
+{
+  "name": "entipic.topic",
+  "version": "0.0.1",
+  "description": "Entipic topic explorer",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/entipic/entipic.topic.git"
+  },
+  "keywords": [
+    "entipic",
+    "topic"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/entipic/entipic.topic/issues"
+  },
+  "homepage": "https://github.com/entipic/entipic.topic",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "chai": "^3.0.0",
+    "chai-as-promised": "^5.1.0"
+  }
+}
