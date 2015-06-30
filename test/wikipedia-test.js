@@ -27,34 +27,34 @@ describe('Wikipedia API', function() {
 });
 
 
-describe('Wikipedia Topic', function() {
+describe('Wikipedia Entity', function() {
   it('#.explore() - rejected', function() {
-    assert.isRejected(wikipedia.topic.explore());
+    assert.isRejected(wikipedia.entity.explore());
   });
   it('#.explore("en") - rejected', function() {
-    assert.isRejected(wikipedia.topic.explore('en'));
+    assert.isRejected(wikipedia.entity.explore('en'));
   });
   it('#.explore("en", 26697539) - fulfilled', function() {
-    assert.isFulfilled(wikipedia.topic.explore('en', 26697539));
+    assert.isFulfilled(wikipedia.entity.explore('en', 26697539));
   });
   it('#.explore("en", 26697539) - page id', function() {
-    return wikipedia.topic.explore('en', 26697539).then(function(page) {
+    return wikipedia.entity.explore('en', 26697539).then(function(page) {
       assert.equal(26697539, page.id);
       //console.log(page);
     });
   });
   it('#.info("en", "barack obama")', function() {
-    return wikipedia.topic.info('en', 'barack obama').then(function(info) {
+    return wikipedia.entity.info('en', 'barack obama').then(function(info) {
       assert.equal('Barack Obama', info.title);
     });
   });
   it('#.info("ru", "barack obama")', function() {
-    return wikipedia.topic.info('ru', 'barack obama').then(function(info) {
+    return wikipedia.entity.info('ru', 'barack obama').then(function(info) {
       assert.equal('Barack Obama', info.title);
     });
   });
   it('#.info("ru", "Обама")', function() {
-    return wikipedia.topic.info('ru', 'Обама').then(function(info) {
+    return wikipedia.entity.info('ru', 'Обама').then(function(info) {
       assert.equal('Обама, Барак', info.title);
     });
   });

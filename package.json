@@ -1,25 +1,25 @@
 {
-  "name": "entipic.topic",
+  "name": "entipic.entity",
   "version": "0.0.1",
-  "description": "Entipic topic explorer",
+  "description": "Entipic entity explorer",
   "main": "./lib/index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/entipic/entipic.topic.git"
+    "url": "https://github.com/entipic/entipic.entity.git"
   },
   "keywords": [
     "entipic",
-    "topic"
+    "entity"
   ],
   "author": "Dumitru Cantea",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/entipic/entipic.topic/issues"
+    "url": "https://github.com/entipic/entipic.entity/issues"
   },
-  "homepage": "https://github.com/entipic/entipic.topic",
+  "homepage": "https://github.com/entipic/entipic.entity",
   "dependencies": {
     "request": "^2.58.0"
   },
