@@ -53,9 +53,20 @@ describe('Wikipedia Entity', function() {
       assert.equal('Barack Obama', info.title);
     });
   });
-  it('#.info("ru", "Обама")', function() {
+  it('#.info("ru", "Обама") - found', function() {
     return wikipedia.entity.info('ru', 'Обама').then(function(info) {
       assert.equal('Обама, Барак', info.title);
+    });
+  });
+  it('#.info("ru", "Обама", false) - undefined', function() {
+    return wikipedia.entity.info('ru', 'Обама', false).then(function(info) {
+      assert.equal(undefined, info);
+    });
+  });
+  it('#.info("ro", "ue") - found UE not UEFA', function() {
+    return wikipedia.entity.info('ro', 'ue').then(function(info) {
+      assert.equal('UE', info.title);
+      assert.equal(undefined, info.description);
     });
   });
 });
