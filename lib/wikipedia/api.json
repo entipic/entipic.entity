@@ -28,5 +28,13 @@
       "rdlimit": "max",
       "redirects": false
     }
+  },
+  "querySearch": {
+    "params": ["srsearch"],
+    "qs": {
+      "action": "query",
+      "list": "search",
+      "srprop": "size"
+    }
   }
 }
