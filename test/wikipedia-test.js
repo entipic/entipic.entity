@@ -1,5 +1,7 @@
-var chai = require("chai");
-var chaiAsPromised = require("chai-as-promised");
+'use strict';
+
+var chai = require('chai');
+var chaiAsPromised = require('chai-as-promised');
 var assert = chai.assert;
 var wikipedia = require('../lib').wikipedia;
 

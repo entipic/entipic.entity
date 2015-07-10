@@ -1,5 +1,5 @@
 {
-  "search": {
+  "openSearch": {
     "params": ["search"],
     "qs": {
       "action": "opensearch"
@@ -29,7 +29,7 @@
       "redirects": false
     }
   },
-  "querySearch": {
+  "search": {
     "params": ["srsearch"],
     "qs": {
       "action": "query",
