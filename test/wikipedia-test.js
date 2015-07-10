@@ -26,6 +26,15 @@ describe('Wikipedia API', function() {
   it('#.search("en", "Enichioi") - fulfilled', function() {
     assert.isFulfilled(wikipedia.api.search('en', 'Enichioi'));
   });
+  it('#.openSearch() - rejected', function() {
+    assert.isRejected(wikipedia.api.search());
+  });
+  it('#.openSearch("en") - rejected', function() {
+    assert.isRejected(wikipedia.api.search('en'));
+  });
+  it('#.openSearch("en", "Enichioi") - fulfilled', function() {
+    assert.isFulfilled(wikipedia.api.search('en', 'Enichioi'));
+  });
 });
 
 
@@ -69,6 +78,32 @@ describe('Wikipedia Entity', function() {
     return wikipedia.entity.info('ro', 'ue').then(function(info) {
       assert.equal('UE', info.title);
       assert.equal(undefined, info.description);
+    });
+  });
+
+  it('#.search("en", "barack obama")', function() {
+    return wikipedia.entity.search('en', 'barack obama').then(function(info) {
+      assert.equal('Barack Obama', info.title);
+    });
+  });
+  it('#.search("ru", "barack obama")', function() {
+    return wikipedia.entity.search('ru', 'barack obama').then(function(info) {
+      assert.equal('Обама, Барак', info.title);
+    });
+  });
+  it('#.search("ru", "Обама") - found', function() {
+    return wikipedia.entity.search('ru', 'Обама').then(function(info) {
+      assert.equal(undefined, info);
+    });
+  });
+  it('#.search("ro", "ue") - not found UE', function() {
+    return wikipedia.entity.search('ro', 'ue').then(function(info) {
+      assert.equal(undefined, info);
+    });
+  });
+  it('#.search("ro", "enichioi cantemir")', function() {
+    return wikipedia.entity.search('ro', 'enichioi cantemir').then(function(info) {
+      assert.equal('Enichioi, Cantemir', info.title);
     });
   });
 });
