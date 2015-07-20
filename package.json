@@ -4,7 +4,8 @@
   "description": "Entipic entity explorer",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",

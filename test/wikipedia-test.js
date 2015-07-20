@@ -54,6 +54,12 @@ describe('Wikipedia Entity', function() {
       //console.log(page);
     });
   });
+  it('#.explore("ro", "România") - page title', function() {
+    return wikipedia.entity.explore('ro', 'România').then(function(page) {
+      assert.equal('România', page.title);
+      // console.log(page);
+    });
+  });
   it('#.info("en", "barack obama")', function() {
     return wikipedia.entity.info('en', 'barack obama').then(function(info) {
       assert.equal('Barack Obama', info.title);
