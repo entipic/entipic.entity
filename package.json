@@ -23,7 +23,7 @@
   "homepage": "https://github.com/entipic/entipic.entity",
   "dependencies": {
     "request": "^2.58.0",
-    "entipic.core": "0.0.1"
+    "entipic.core": "^0.0.2"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
